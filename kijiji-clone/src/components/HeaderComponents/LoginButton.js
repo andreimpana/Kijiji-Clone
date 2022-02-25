@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class LoginButton extends Component {
     render() {
         return (
-            <a className="item" style={{ background: "#4B4881" }}>
-                <p style={{color: "white"}}>
-                    Login
+            <div style={{"display": "flex","justifyContent":"center", "alignItems": "center", "marginRight": "20px"}}>
+                <p>
+                    <a href='#'>Register</a> or <a href='#'>Login</a>
                 </p>
-            </a>
+            </div>
         );
     }
 }

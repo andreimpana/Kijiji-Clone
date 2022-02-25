@@ -6,16 +6,18 @@ import history from '../history';
 
 const App = () => {
     return (
-        <div className='ui container'>
+        <div>
             <Router history={history}>
-                <div>
-                    <Header/>
-                    <Switch>
-                        <Route path="/" exact component={ListingsList}></Route>
-                    </Switch>
-                </div>
-            </Router>                
-        </div>
+                <Header></Header>
+                    <div className='ui container'>
+                        <div>
+                            <Switch>
+                                <Route path="/" exact component={ListingsList}></Route>
+                            </Switch>
+                        </div>
+                    </div>
+            </Router>
+        </div> 
     );
 };
 

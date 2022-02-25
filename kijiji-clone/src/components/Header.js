@@ -5,26 +5,22 @@ import PostAdButton from "./HeaderComponents/PostAdButton";
 
 const Header = () => {
     return (
-        <div className="ui fluid pointing menu">
-            <a className="item">
-                Listings
-            </a>
-            <a className="item">
-                Watching
-            </a>
-            <a className="item">
-                <div className="ui fluid search" >
-                    <div className="ui icon input">
-                        <input className="prompt" type="text" placeholder="Search for listings"/>
-                        <i className="search icon"></i>
+        <div className="ui fixed borderless huge menu">
+                <a className="header item">Kijiji clone</a>
+                <Link to="/" className="active item">Home</Link>
+                <Link to="/about" className="item">About</Link>
+
+                <div className="right menu">
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="search link icon"></i>
+                        </div>
                     </div>
+                    <LoginButton></LoginButton>
+                    <PostAdButton></PostAdButton>
                 </div>
-            </a>    
-            <div className="right menu">
-                <LoginButton></LoginButton>
-                <PostAdButton></PostAdButton>
             </div>
-        </div>
     );
 }
 

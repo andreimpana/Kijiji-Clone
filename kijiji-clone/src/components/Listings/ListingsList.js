@@ -21,7 +21,7 @@ class ListingsList extends Component {
                         <div className='description' style={{ 'font-size': '26px', 'font-weight':'bold', 'color' : 'green'}}>
                             {listing.price}
                             <span className='right floated'>
-                                <button className='ui green basic button'>Contact</button>
+                                <Link to="/contact" className='ui green basic button'>Contact</Link>
                             </span>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ class ListingsList extends Component {
     render() {
         console.log(this.props.listings);
         return (
-            <div className='ui link cards'>
+            <div className='ui link cards' style={{"marginTop": "5em"}}>
                 {this.renderList()}
             </div>
         );
