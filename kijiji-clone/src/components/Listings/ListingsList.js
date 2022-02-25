@@ -18,7 +18,8 @@ class ListingsList extends Component {
                     <div className="content">
                         <div class="header">{listing.title}</div>
                         <div className='meta'>{listing.location}</div>
-                        <div className='description' style={{ 'font-size': '26px', 'font-weight':'bold', 'color' : 'green'}}>{listing.price}
+                        <div className='description' style={{ 'font-size': '26px', 'font-weight':'bold', 'color' : 'green'}}>
+                            {listing.price}
                             <span className='right floated'>
                                 <button className='ui green basic button'>Contact</button>
                             </span>
