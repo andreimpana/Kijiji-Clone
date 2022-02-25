@@ -1,17 +1,39 @@
 import React, { Component } from 'react';
 import { fetchListings } from '../../actions/index';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class ListingsList extends Component {
     componentDidMount(){
         this.props.fetchListings();
     }
 
+    renderList(){
+        return this.props.listings.map(listing =>{
+            return(
+                <div className='card' key={listing.id} style={{'width': "366px"}}>
+                    <div className='image'>
+                        <img src={listing.imageLink}></img>
+                    </div>
+                    <div className="content">
+                        <div class="header">{listing.title}</div>
+                        <div className='meta'>{listing.location}</div>
+                        <div className='description' style={{ 'font-size': '26px', 'font-weight':'bold', 'color' : 'green'}}>{listing.price}
+                            <span className='right floated'>
+                                <button className='ui green basic button'>Contact</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
+    }
+
     render() {
         console.log(this.props.listings);
         return (
-            <div className='ui container'>
-                ListingsList
+            <div className='ui link cards'>
+                {this.renderList()}
             </div>
         );
     }
