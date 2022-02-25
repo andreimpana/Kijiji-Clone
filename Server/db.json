@@ -1,0 +1,18 @@
+{
+  "Listings": [
+    {
+      "id": 1,
+      "title": "Snow Blower for sale",
+      "seller": "Andrei",
+      "price" : "$100",
+      "location": "Waterloo"
+    },
+    {
+      "id": 2,
+      "title": "Bike for sale",
+      "seller": "Andrei",
+      "price" : "$200",
+      "location": "Kitchener"
+    }
+  ]
+}

@@ -6,8 +6,9 @@ class ListingsList extends Component {
     componentDidMount(){
         this.props.fetchListings();
     }
-    
+
     render() {
+        console.log(this.props.listings);
         return (
             <div className='ui container'>
                 ListingsList
