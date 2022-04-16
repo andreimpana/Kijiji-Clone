@@ -3,6 +3,7 @@ import Header from './Header';
 import {Router, Route, Switch, Routes} from 'react-router-dom';
 import ListingsList from './Listings/ListingsList';
 import history from '../history';
+import ListingsCreate from './Listings/ListingsCreate';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                         <div>
                             <Switch>
                                 <Route path="/" exact component={ListingsList}></Route>
+                                <Route path="/createAd" exact component={ListingsCreate}></Route>
                             </Switch>
                         </div>
                     </div>
