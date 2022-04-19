@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import ListingsCreate from '../Listings/ListingsCreate';
-import Modal from '../Modal';
 
 class PostAdButton extends Component {
     render() {
