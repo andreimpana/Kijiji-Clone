@@ -7,10 +7,11 @@ import ListingsCreate from './Listings/ListingsCreate';
 import About from './About';
 
 class App extends React.Component{
-    state = {};
-    onTermSubmit = async (term) => {
-        console.log(term)
-    }
+    // state = {};
+    // onTermSubmit = async (term) => {
+    //     console.log(term)
+    // }
+    
     render(){
         return (
             <div>
