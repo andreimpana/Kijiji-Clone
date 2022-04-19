@@ -16,9 +16,9 @@ class ListingsList extends Component {
                         <img src={listing.imageLink}></img>
                     </div>
                     <div className="content">
-                        <div class="header">{listing.title}</div>
+                        <div className="header">{listing.title}</div>
                         <div className='meta'>{listing.location}</div>
-                        <div className='description' style={{ 'font-size': '26px', 'font-weight':'bold', 'color' : 'green'}}>
+                        <div className='description' style={{ 'fontSize': '26px', 'fontWeight':'bold', 'color' : 'green'}}>
                             {listing.price}
                             <span className='right floated'>
                                 <Link to="/contact" className='ui green basic button'>Contact</Link>
@@ -31,7 +31,7 @@ class ListingsList extends Component {
     }
 
     render() {
-        console.log(this.props.listings);
+        //console.log(this.props.listings);
         return (
             <div className='ui link cards' style={{"marginTop": "5em"}}>
                 {this.renderList()}

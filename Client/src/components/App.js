@@ -1,17 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import {Router, Route, Switch, Routes} from 'react-router-dom';
+import {Router, Route, Switch} from 'react-router-dom';
 import ListingsList from './Listings/ListingsList';
 import history from '../history';
 import ListingsCreate from './Listings/ListingsCreate';
 import About from './About';
 
 class App extends React.Component{
-    // state = {};
-    // onTermSubmit = async (term) => {
-    //     console.log(term)
-    // }
-    
     render(){
         return (
             <div>

@@ -12,15 +12,15 @@ class SearchBar extends Component {
         return (
             <div className="right menu">
                 <form onSubmit={this.onFormSubmit}>
-                        <div class="item">
-                            <div class="ui icon input">
+                        <div className="item">
+                            <div className="ui icon input">
                                     <input 
                                         type="text" 
                                         placeholder="Search..." 
                                         value={this.state.term}
                                         onChange={e=>this.setState({term: e.target.value})}
                                         />
-                                    <i class="search link icon"></i>
+                                    <i className="search link icon"></i>
                             </div>
                         </div>
                 </form>

@@ -16,7 +16,7 @@ const Modal = (props) => {
                         <label>Price</label>
                         <input type="text" name="Price" placeholder="Price"></input>
                     </div>
-                    <button class="ui button" type="submit">Submit</button>
+                    <button className="ui button" type="submit">Submit</button>
                 </form>
             </div>
         </div>,
