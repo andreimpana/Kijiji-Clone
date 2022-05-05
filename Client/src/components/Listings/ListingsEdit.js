@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class ListingsEdit extends Component {
+class ListingsEdit extends Component {
   render() {
     return (
-      <div>ListingsEdit</div>
-    )
+      <div>
+        ListingsEdit
+      </div>
+    );
   }
 }
+
+export default ListingsEdit;

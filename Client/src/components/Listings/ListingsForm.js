@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class ListingsForm extends Component {
+class ListingsForm extends Component {
   render() {
     return (
-      <div>ListingsForm</div>
-    )
+      <div>
+        ListingsForm
+      </div>
+    );
   }
 }
+
+export default ListingsForm;
