@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import ListingsForm from './ListingsForm';
 
 class ListingsCreate extends Component {
     render() {
         return (
             <div>
-                ListingsCreate
+            <h3>Post an Ad</h3>
+            <ListingsForm></ListingsForm>
             </div>
         );
     }
