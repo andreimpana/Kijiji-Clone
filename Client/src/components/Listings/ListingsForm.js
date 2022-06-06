@@ -22,18 +22,22 @@ class ListingsForm extends Component {
       </div>
     );
   }
+  
+  onSubmit = (formValues) => {
+    this.props.onSubmit(formValues);
+  }
 
   render() {
     return (
       <div>
-        <form className='ui form error'>
+        <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='ui form error'>
           <Field name="title" component={this.renderInput} label="Enter Title"></Field>
-          <Field name="description" component={this.renderInput} label="Enter Description"></Field>
           <Field name="price" component={this.renderInput} label="Price"></Field>
           <Field name="location" component={this.renderInput} label="Location"></Field>
-          <Field name="image" component={this.renderInput} label="Link to Image"></Field>
-          <Field name="email" component={this.renderInput} label="Contact Email"></Field>
-          <Field name="phone" component={this.renderInput} label="Contact Phone Number"></Field>
+          <Field name="imageLink" component={this.renderInput} label="Link to Image"></Field>
+          <Field name="contactEmail" component={this.renderInput} label="Contact Email"></Field>
+          <Field name="contactPhone" component={this.renderInput} label="Contact Phone Number"></Field>
+          <button className="ui primary button" type="submit">Post Ad</button>
         </form>
       </div>
     );
@@ -47,8 +51,24 @@ const validate = (formValues) => {
       errors.title = 'You must enter a value';
   }
 
-  if (!formValues.description) {
-      errors.description = 'You must enter a description'
+  if (!formValues.price) {
+    errors.price = 'You must enter a price'
+  }
+
+  if (!formValues.location) {
+    errors.location = 'You must enter a location'
+  }
+
+  if (!formValues.imageLink) {
+    errors.imageLink = 'You must enter a imageLink'
+  }
+
+  if (!formValues.contactEmail) {
+    errors.contactEmail = 'You must enter a email'
+  }
+
+  if (!formValues.contactPhone) {
+    errors.contactPhone = 'You must enter a phone number'
   }
 
   return errors;
