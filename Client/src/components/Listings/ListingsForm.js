@@ -17,7 +17,7 @@ class ListingsForm extends Component {
     return (
       <div className={className}>
         <label>{label}</label>
-        <input {...input} autoComplete="off" />
+        <input {...input} autoComplete="off"/>
         {this.renderError(meta)}
       </div>
     );
@@ -28,6 +28,8 @@ class ListingsForm extends Component {
   }
 
   render() {
+    // var auth = window.gapi.auth2.getAuthInstance();
+    // console.log(auth.currentUser.get().getBasicProfile().getEmail())
     return (
       <div>
         <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='ui form error'>
@@ -35,7 +37,7 @@ class ListingsForm extends Component {
           <Field name="price" component={this.renderInput} label="Price"></Field>
           <Field name="location" component={this.renderInput} label="Location"></Field>
           <Field name="imageLink" component={this.renderInput} label="Link to Image"></Field>
-          <Field name="contactEmail" component={this.renderInput} label="Contact Email"></Field>
+          <Field name="contactEmail" component={this.renderInput} label="Contact Email" ></Field>
           <Field name="contactPhone" component={this.renderInput} label="Contact Phone Number"></Field>
           <button className="ui primary button" type="submit">Post Ad</button>
         </form>

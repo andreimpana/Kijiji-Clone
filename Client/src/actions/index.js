@@ -20,11 +20,6 @@ export const signOut = () => {
     };
 };
 
-export const getEmail = () => async (dispatch, getState) => {
-    const { email } = getState().auth;
-    return email;
-}
-
 export const createListing = (formValues) => async (dispatch, getState) => {
     const { userId } = getState().auth;
     const response = await Listings.post('/Listings', {...formValues, userId });
