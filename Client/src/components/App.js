@@ -4,6 +4,7 @@ import {Router, Route, Switch} from 'react-router-dom';
 import ListingsList from './Listings/ListingsList';
 import history from '../history';
 import ListingsCreate from './Listings/ListingsCreate';
+import ListingContact from './Listings/ListingContact';
 import About from './About';
 
 class App extends React.Component{
@@ -20,6 +21,7 @@ class App extends React.Component{
                                     <Route path="/user/register" exact component={ListingsCreate}></Route>
                                     <Route path="/user/login" exact component={ListingsCreate}></Route>
                                     <Route path="/about" exact component={About}></Route>
+                                    <Route path="/contact/:id" exact component={ListingContact}></Route>
                                 </Switch>
                             </div>
                         </div>

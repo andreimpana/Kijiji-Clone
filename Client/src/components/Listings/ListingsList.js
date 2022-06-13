@@ -21,7 +21,7 @@ class ListingsList extends Component {
                         <div className='description' style={{ 'fontSize': '26px', 'fontWeight':'bold', 'color' : 'green'}}>
                             {listing.price}
                             <span className='right floated'>
-                                <Link to="/contact" className='ui green basic button'>Contact</Link>
+                                <Link to={`/contact/${listing.id}`} className='ui green basic button'>Contact</Link>
                             </span>
                         </div>
                     </div>
