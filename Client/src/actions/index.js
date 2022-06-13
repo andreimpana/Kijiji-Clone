@@ -1,6 +1,6 @@
 import history from "../history";
 import Listings from "../api/Listings";
-import { FETCH_LISTINGS, SIGN_IN, SIGN_OUT } from "./types"
+import { FETCH_LISTINGS, SIGN_IN, SIGN_OUT, CREATE_LISTING } from "./types"
 
 export const fetchListings = () => async (dispatch) => {
     const response = await Listings.get('/Listings');
@@ -18,4 +18,11 @@ export const signOut = () => {
     return {
         type: SIGN_OUT
     };
+};
+
+export const createListing = (formValues) => async (dispatch, getState) => {
+    const { userId } = getState().auth;
+    const response = await Listings.post('/Listings', {...formValues, userId });
+    dispatch({ type: CREATE_LISTING, payload: response.data });
+    history.push('/');
 };
