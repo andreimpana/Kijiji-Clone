@@ -2,11 +2,11 @@
   "Listings": [
     {
       "id": 1,
-      "title": "Snow Blower for sale",
+      "title": "2020 Honda Civic For sale",
       "seller": "Andrei",
-      "price": "$100",
+      "price": "$20,000",
       "location": "Waterloo",
-      "imageLink": "https://i.ebayimg.com/images/g/CNsAAOSwFbViGCWB/s-l640.webp",
+      "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Honda_Civic_hatchback_002.jpg/640px-Honda_Civic_hatchback_002.jpg",
       "contactEmail": "test@gmail.com",
       "contactPhone": "1234567890"
     },
@@ -32,31 +32,31 @@
     },
     {
       "id": 4,
-      "title": "Snow Blower for sale",
+      "title": "Climbing Shoes",
       "seller": "Andrei",
       "price": "$100",
       "location": "Waterloo",
-      "imageLink": "https://i.ebayimg.com/images/g/CNsAAOSwFbViGCWB/s-l640.webp",
+      "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Old_and_new_climbing_shoes.JPG/640px-Old_and_new_climbing_shoes.JPG",
       "contactEmail": "test@gmail.com",
       "contactPhone": "1234567890"
     },
     {
       "id": 5,
-      "title": "Snow Blower for sale",
+      "title": "Retro Console",
       "seller": "Andrei",
       "price": "$100",
       "location": "Waterloo",
-      "imageLink": "https://i.ebayimg.com/images/g/CNsAAOSwFbViGCWB/s-l640.webp",
+      "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sony_Playstation_2_SCPH-5001_V9_%2819290958318%29.jpg/640px-Sony_Playstation_2_SCPH-5001_V9_%2819290958318%29.jpg",
       "contactEmail": "test@gmail.com",
       "contactPhone": "1234567890"
     },
     {
       "id": 6,
-      "title": "Snow Blower for sale",
+      "title": "Used lawn mower, like new",
       "seller": "Andrei",
       "price": "$100",
       "location": "Waterloo",
-      "imageLink": "https://i.ebayimg.com/images/g/CNsAAOSwFbViGCWB/s-l640.webp",
+      "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lawn_mower_1.JPG/640px-Lawn_mower_1.JPG",
       "contactEmail": "test@gmail.com",
       "contactPhone": "1234567890"
     },
