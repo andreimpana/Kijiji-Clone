@@ -35,7 +35,7 @@ class ListingsList extends Component {
         console.log(this.props.currentUserId)
         if (listing.userId === this.props.currentUserId) {
             return (
-                <button className='ui youtube button'>Delete</button>
+                <Link to={`/listings/delete/${listing.id}`} className='ui youtube button'>Delete</Link>
             );
         }
     }
