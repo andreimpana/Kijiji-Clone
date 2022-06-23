@@ -65,16 +65,6 @@
       "contactEmail": "test@gmail.com",
       "userId": "102915512505611144495",
       "contactPhone": "1234567890"
-    },
-    {
-      "title": "test",
-      "price": "test",
-      "location": "test",
-      "imageLink": "test",
-      "contactEmail": "test",
-      "contactPhone": "test",
-      "userId": "102915512505611144495",
-      "id": 7
     }
   ]
 }
