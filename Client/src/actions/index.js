@@ -2,11 +2,6 @@ import history from "../history";
 import Listings from "../api/Listings";
 import { FETCH_LISTINGS, SIGN_IN, SIGN_OUT, CREATE_LISTING, FETCH_LISTING, DELETE_LISTING } from "./types"
 
-export const fetchListings = () => async (dispatch) => {
-    const response = await Listings.get('/Listings');
-    dispatch({ type: FETCH_LISTINGS, payload: response.data });
-}
-
 export const signIn = (userId) => {
     return {
         type: SIGN_IN,
@@ -19,6 +14,12 @@ export const signOut = () => {
         type: SIGN_OUT
     };
 };
+
+export const fetchListings = () => async (dispatch) => {
+    const response = await Listings.get('/Listings');
+    dispatch({ type: FETCH_LISTINGS, payload: response.data });
+}
+
 
 export const createListing = (formValues) => async (dispatch, getState) => {
     const { userId } = getState().auth;
@@ -36,4 +37,10 @@ export const deleteListing = (id) => async (dispatch) => {
     await Listings.delete(`/Listings/${id}`);
     dispatch({ type: DELETE_LISTING, payload: id });
     history.push('/');
+}
+
+// Playing around with this
+export const fetchListingKeyword = (id, keyword) => async (dispatch) => {
+    const response = await Listings.get(`/Listings?title_like=${keyword}`);
+    dispatch({ type: FETCH_LISTING, payload: response.data });
 }
