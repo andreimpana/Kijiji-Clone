@@ -15,3 +15,5 @@ What things you need to install the software
 ```
 - Any package manager (npm, yarn)
 ```
+
+How it looks
