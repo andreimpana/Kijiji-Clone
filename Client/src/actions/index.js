@@ -20,7 +20,6 @@ export const fetchListings = () => async (dispatch) => {
     dispatch({ type: FETCH_LISTINGS, payload: response.data });
 }
 
-
 export const createListing = (formValues) => async (dispatch, getState) => {
     const { userId } = getState().auth;
     const response = await Listings.post('/Listings', { ...formValues, userId });
@@ -42,6 +41,6 @@ export const deleteListing = (id) => async (dispatch) => {
 // Playing around with this
 // https://www.npmjs.com/package/json-server
 export const fetchListingKeyword = (keyword) => async (dispatch) => {
-    const response = await Listings.get(`/Listings?title_like=${keyword}`);
+    const response = await Listings.get(`/Listings?title=${'test'}`);
     dispatch({ type: FETCH_LISTING, payload: response.data });
 }

@@ -65,6 +65,17 @@
       "contactEmail": "test@gmail.com",
       "userId": "102915512505611144495",
       "contactPhone": "1234567890"
+    },
+    {
+      "id": 7,
+      "title": "test",
+      "seller": "Andrei",
+      "price": "$100",
+      "location": "Waterloo",
+      "imageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lawn_mower_1.JPG/640px-Lawn_mower_1.JPG",
+      "contactEmail": "test@gmail.com",
+      "userId": "102915512505611144495",
+      "contactPhone": "1234567890"
     }
   ]
 }

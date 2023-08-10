@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import { fetchListings } from '../../actions/index';
+import { fetchListings, fetchListingKeyword } from '../../actions/index';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class ListingsList extends Component {
     componentDidMount() {
-        this.props.fetchListings();
+        if(this.props.searchTerm!== "")
+        {
+            this.props.fetchListingKeyword(this.props.searchTerm);
+        }
+        else
+        {
+            this.props.fetchListings();
+        }
     }
 
     renderList() {
+        console.log(this.props.listings)
         return this.props.listings.map(listing => {
             return (
                 <div className='card' key={listing.id} style={{ 'width': "366px", "boxShadow": "1px 1px 4px" }}>
@@ -31,7 +39,6 @@ class ListingsList extends Component {
     }
 
     renderControls(listing) {
-        console.log(this.props.currentUserId)
         if (listing.userId === this.props.currentUserId) {
             return (
                 <div className='adminControls'>
@@ -45,9 +52,7 @@ class ListingsList extends Component {
             );
         }
     }
-
     render() {
-        //console.log(this.props.listings);
         return (
             <div className='ui link cards' style={{ "marginTop": "5em" }}>
                 {this.renderList()}
@@ -61,7 +66,4 @@ const mapStateToProps = state => {
         currentUserId: state.auth.userId
     }
 }
-export default connect(
-    mapStateToProps,
-    { fetchListings }
-)(ListingsList);
+export default connect(mapStateToProps, { fetchListings, fetchListingKeyword })(ListingsList);
